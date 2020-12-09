@@ -1,0 +1,82 @@
+<head>
+    <script src="cubemovin.js"></script>
+</head>
+<style>
+    #box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        display: flex;
+        align-items: center;
+        position: absolute;
+
+    }
+</style>
+
+<body>
+    <div id="color">
+        <button id="btn-left">LEFT</button>
+        <button id="btn-right">RIGHT</button>
+        <button id="btn-color">color</button>
+        <div id="box" style="background-color:red">
+            part2
+        </div>
+        <script>
+            var position = 0
+            document.getElementById('btn-left').addEventListener('click', function () {
+                position = position + 50
+                document.getElementById('box').style.left = position + "px"
+            })
+            var box = document.getElementById('box');
+            console.log(box.style)
+            var position = 16;
+            var speed = 50
+            document.getElementById('btn-left').addEventListener('click', function () {
+                position = position - speed
+                box.style.left = position + "px"
+            })
+            document.getElementById('btn-right').addEventListener('click', function () {
+                position = position + speed
+                box.style.left = position + "px"
+            })
+            var box = document.getElementById('box');
+            console.log(box.style)
+            var position = 16;
+            var speed = 50
+            document.getElementById('btn-left').addEventListener('click', function () {
+                position = position - speed
+                box.style.left = position + "px"
+                document.getElementById('btn-left').addEventListener('click', function () {
+                    if (box.style.backgroundColor == 'red') {
+                        box.style.backgroundColor = 'yellow';
+                    }
+                    else if (box.style.backgroundColor == 'yellow') {
+                        box.style.backgroundColor = 'green';
+                    }
+                    else if (box.style.backgroundColor == 'green') {
+                        box.style.backgroundColor = 'red';
+                    }
+                })
+                document.getElementById('btn-right').addEventListener('click', function () {
+                    if (box.style.backgroundColor == 'red') {
+                        box.style.backgroundColor = 'yellow';
+                    }
+                    else if (box.style.backgroundColor == 'yellow') {
+                        box.style.backgroundColor = 'green';
+                    }
+                    else if (box.style.backgroundColor == 'green') {
+                        box.style.backgroundColor = 'red';
+                    }
+                })
+            })
+
+            document.getElementById('btn-right').addEventListener('click', function () {
+                position = position + speed
+                box.style.left = position + "px"
+            })
+
+
+        </script>
+
+
+</body>

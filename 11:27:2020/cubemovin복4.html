@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        width: 200px;
+        height: 200px;
+        background-color: peachpuff;
+        border: 10px solid pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+    }
+</style>
+<button id="btn-left">LEFT</button>
+<button id="btn-right">RIGHT</button>
+<button id="btn-down">DOWN</button>
+<button id="btn-up">UP</button>
+<br>
+<button id="btn-speed50">SPEED50</button>
+<button id="btn-speed100">SPEED100</button>
+<button id="btn-speed200">SPEED200</button>
+<div id="box">
+    <p>노가다</p>
+</div>
+<script>
+    var positionx = 0
+    document.getElementById('btn-left')
+        .addEventListener('click', function () {
+            positionx = positionx + 100
+            document.getElementById('box').style.left = positionx + "px"
+        });
+    document.getElementById('btn-right')
+        .addEventListener('click', function () {
+            positionx = positionx - 100
+            document.getElementById('box').style.left = positionx + "px"
+        });
+    var positiony = 0
+    document.getElementById('btn-up')
+        .addEventListener('click', function () {
+            positiony = positiony - 100
+            document.getElementById('box').style.top = positiony + "px"
+        });
+       
+    document.getElementById('btn-down')
+        .addEventListener('click', function () {
+            positiony = positiony + 100
+            document.getElementById('box').style.top = positiony + "px"
+        })
+        document.getElementById('btn-speed50')
+        .addEventListener('click', function () {
+            positiony = positiony - 100
+            document.getElementById('box').style.top = positiony + "px"
+        });
+       
+    document.getElementById('btn-speed100')
+        .addEventListener('click', function () {
+            positiony = positiony + 100
+            document.getElementById('box').style.top = positiony + "px"
+        })
+        document.getElementById('btn-speed200')
+        .addEventListener('click', function () {
+            positiony = positiony + 100
+            document.getElementById('box').style.top = positiony + "px"
+        })
+        </script>
+
+
+<body>
+</body>
+
+</html>
